@@ -1,0 +1,21 @@
+
+Uma variável é um espço alocado na memória RAM onde podemos por meio delas 
+guardar dados de diversos tipos para serem utilizados, como por exemplo:
+Inteiros(int)    = Numeros da casa dos inteiros -1, 0, 1, 2, 3 etc...
+Decimais(float)  = Numéros que possuem casas decimais 0.51, 0.15 1000.125 etc...
+Caracteres(char[1]) = Um caracter unico a, b, c, '1', @ etc...
+Cadeia(char[]) = Uma sequencia de caracteres 'Olá Mundo', 'Como vai?' etc...
+Lógicos(bool) = Tipos lógicos guardam apenas verdadeiro ou falseo, 1 ou 0.
+
+
+Nas linguagens de programação tipadas, ou sejá, que é necessário informar o tipo
+da variáveil, muitas vezes a sua declaração segue o seguinte padrão:
+TIPO_DA_VARIAVEL NOME_DA_VARIAVEL = VALOR_ATRIBUIÇÃO_INICIAL;
+int variavelTipoInteiro = 7;
+float variavelTipoDecimal = 3.14;
+
+E para atribuir um valor a uma variável existente, basta seguirmos a lógica
+de atribuição para quando a criamos. Quando utilizamos o simbolo de igual(=)
+estamos dizendo que vamos atribuir a variável que esta a esquerda o valor da direita ex:
+variavelTipoInteiro = 10;
+variavelTipoDecimal = 7.45;
