@@ -1,51 +1,43 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void main(){
 
-    int diaNasc = 15, 
-        mesNasc = 3, 
-        anoNasc = 1997,
-        dia = 25,
-        mes = 1,
-        ano = 2020,
-        diasRestantes;
+    int diaNasc,
+        mesNasc,
+        anoNasc,
+        dia,
+        mes,
+        ano,
+        idade,
+        diasRestantes,
+        diasAniversario,
+        diasAtual;
 
-    // printf("Digite sua data de nascimento no formato DD MM YYYY: ");
-    // scanf("%d", &diaNasc);
-    // scanf("%d", &mesNasc);
-    // scanf("%d", &anoNasc);
-    
-    // printf("Digite a data de HOJE no formato DD MM YYYY: ");
-    // scanf("%d", &dia);
-    // scanf("%d", &mes);
-    // scanf("%d", &ano);
+     printf("Digite sua data de nascimento no formato DD MM YYYY: \n");
+     scanf("%d", &diaNasc);
+     scanf("%d", &mesNasc);
+     scanf("%d", &anoNasc);
 
-    // printf("%d %d %d", diaNasc, mesNasc, anoNasc);
-    // printf("%d %d %d", dia, mes, ano);
-    // return;
-    int idade = ano - anoNasc;
+     printf("Digite a data de HOJE no formato DD MM YYYY: \n");
+     scanf("%d", &dia);
+     scanf("%d", &mes);
+     scanf("%d", &ano);
 
-    int diasAniversario = ((ano + 1) * 365 ) + (mesNasc * 30) - diaNasc;
-    int diasAtual = (ano * 365) + (mes * 30) - dia;
+    idade = (((ano * 365) + (mes * 30) + dia) - ((anoNasc * 365) + (mesNasc * 30) + diaNasc)) / 365;
 
-    if (mesNasc >= mes && (mesNasc >= mes && diaNasc >= dia) ) {
+    diasAniversario = (mesNasc * 30) - (30 - diaNasc);
+    diasAtual = (mes * 30) - (30 - dia);
+    diasRestantes = diasAniversario - diasAtual;
 
-        diasRestantes = diasAtual - diasAniversario;
+    if (diasRestantes < 0) {
         diasRestantes = diasRestantes + 365;
-
-    } else {
-        diasRestantes = diasAniversario - diasAtual;
-        diasRestantes = 365 - diasRestantes;
-        
     }
 
-    printf("%d", diasRestantes);
-    return;
-
-    if (idade >= 18) {
-        printf("Falta %d dias para seu aniversário", diasRestantes);
+    if (idade >= 18){
+        printf("Faltam %d dias para seu aniversario", diasRestantes);
     } else {
-        printf("Falta %d meses para seu aniversário", diasRestantes);
+        printf("Faltam %d meses para seu aniversario", diasRestantes / 30);
     }
 
 }
