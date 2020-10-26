@@ -40,9 +40,4 @@ void main(){
     printf("\n\n********* Funcionario 2");
     printf("\nCodigo: %d", func2.codigo);
     printf("\nFunctionario: %s", func2.nome);
-
-
-
-
-
 }
